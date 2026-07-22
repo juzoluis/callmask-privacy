@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — CallMask</title>
+<meta name="description" content="Privacy Policy for CallMask, an Android call-blocking app based on phone number masks. Nothing ever leaves your device.">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --fg: #1c2024;
+    --muted: #5b6470;
+    --accent: #1e6fd9;
+    --border: #e2e6eb;
+    --note-bg: #eef4fd;
+    --note-border: #1e6fd9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --card: #1c2024;
+      --fg: #e7eaee;
+      --muted: #a2acb8;
+      --accent: #6fa8f5;
+      --border: #2c3238;
+      --note-bg: #182436;
+      --note-border: #6fa8f5;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px 28px 40px;
+  }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 8px; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 6px; }
+  h2 { font-size: 1.2rem; margin: 32px 0 10px; }
+  h3 { font-size: 1.02rem; margin: 22px 0 6px; }
+  p, ul, ol { margin: 0 0 14px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 0.95rem; margin: 0; }
+  .lang { margin-top: 14px; font-size: 0.9rem; }
+  .note {
+    background: var(--note-bg);
+    border-left: 4px solid var(--note-border);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 18px 0;
+  }
+  .note p:last-child { margin-bottom: 0; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1px 5px;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 18px; font-size: 0.95rem; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .wrap { overflow-x: auto; }
+  footer {
+    max-width: 780px;
+    margin: 22px auto 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>CallMask Privacy Policy</h1>
+    <p class="sub">Last updated: <strong>July 22, 2026</strong></p>
+    <p class="sub">Android application <code>com.juzoluis.callmask</code></p>
+    <p class="lang"><a href="index.html" hreflang="pt-BR">Leia esta política em português &rarr;</a></p>
+  </header>
+
+  <div class="note">
+    <p><strong>Summary in one sentence:</strong> CallMask runs entirely on your device. It does not hold
+    the internet permission, it sends nothing anywhere, it has no servers, no analytics and no ads —
+    and uninstalling the app deletes all of its data.</p>
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>
+    CallMask is developed and maintained independently by <strong>Juzo Luis Hatao Marinelli</strong>,
+    an individual developer. For any question, request or complaint about privacy and data protection,
+    contact <a href="mailto:juzoluis@gmail.com">juzoluis@gmail.com</a>.
+  </p>
+
+  <h2>2. What the app does</h2>
+  <p>
+    CallMask blocks incoming phone calls based on number <em>masks</em> that you define (for example
+    <code>+5511*</code>, <code>0800???????</code> or <code>*9845*</code>). While the app holds the
+    Android <em>call screening</em> role (Android 10 or newer), the operating system hands it every
+    incoming call before the phone rings, and the app tells the system whether the call should be
+    rejected or allowed through.
+  </p>
+
+  <h2>3. What data is accessed</h2>
+  <div class="wrap">
+  <table>
+    <tr>
+      <th>Data</th>
+      <th>Source</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>Phone number of the incoming call</td>
+      <td>Handed to the screening service by the Android system itself, at call time</td>
+      <td>Matched against your rules (masks) to decide whether to block or allow the call</td>
+    </tr>
+    <tr>
+      <td>Device call log (<code>READ_CALL_LOG</code> permission)</td>
+      <td>Your phone's own call log, read only when you open the “Calls” tab</td>
+      <td>Show you the list of received/placed calls so you can select numbers and build blocking or
+      allow masks from them</td>
+    </tr>
+    <tr>
+      <td>Your rules and blocked-call history</td>
+      <td>Created by you inside the app</td>
+      <td>Enforce blocking and show which calls were blocked, when, and by which mask</td>
+    </tr>
+  </table>
+  </div>
+  <p>
+    <code>READ_CALL_LOG</code> is the <strong>only</strong> permission declared by the application,
+    besides the call screening role you explicitly grant in Android settings. The app does
+    <strong>not</strong> request access to contacts, messages, microphone, camera, location, files,
+    advertising identifiers or any other data source.
+  </p>
+
+  <h2>4. Where the data is stored</h2>
+  <p>
+    Everything stays <strong>on your device only</strong>, in a local database (Room/SQLite, file
+    <code>callblocker.db</code>) inside the app's private storage, plus a simple preference for the
+    “block hidden numbers” option. Specifically, the app stores:
+  </p>
+  <ul>
+    <li><strong>Rules:</strong> the mask, a label you choose, the type (block or always allow), whether
+    it is enabled, and the creation date.</li>
+    <li><strong>Blocked-call history:</strong> the blocked number (or a “hidden” marker when the call
+    has no caller ID), the mask that matched, and the date/time.</li>
+  </ul>
+  <p>
+    The device call log is <strong>not copied</strong> into the app's database: it is read on demand,
+    only for display, while you are using the “Calls” tab. Allowed calls are <strong>not</strong>
+    recorded by the app.
+  </p>
+
+  <h2>5. Nothing is transmitted</h2>
+  <p>
+    CallMask <strong>does not declare the internet permission</strong>
+    (<code>android.permission.INTERNET</code>) in its manifest. This means the app is technically
+    <em>unable</em> to open any network connection — this is not a promise, it is a restriction enforced
+    by the operating system, and anyone can verify it by inspecting the manifest of the
+    published APK itself (for example with <code>aapt dump permissions</code> or any APK
+    inspection app) — you don't have to take my word for it. As a result:
+  </p>
+  <ul>
+    <li>there is no CallMask server, backend or “cloud”;</li>
+    <li>there is no analytics, telemetry, crash reporting or tracking;</li>
+    <li>there are no ads and no advertising SDKs;</li>
+    <li>there are no third-party data-collecting SDKs — the app only uses Android's own libraries
+    (AndroidX, Jetpack Compose and Room), which work locally;</li>
+    <li>the developer has no access, and cannot gain access, to your numbers, rules or history.</li>
+  </ul>
+
+  <div class="note">
+    <p><strong>An honest note about Android backup.</strong> The app allows Android's standard automatic
+    backup. If you keep Android backup enabled in your device settings, the app's data may be included
+    in <em>your</em> backup, in <em>your</em> Google account, just like other apps. That backup is
+    performed and encrypted by the operating system, is controlled by you under
+    <em>Settings &rsaquo; Google &rsaquo; Backup</em>, and neither CallMask nor the developer can access
+    its content. You may disable backup for this app in Android settings if you prefer.</p>
+  </div>
+
+  <h2>6. Data sharing and selling</h2>
+  <p>
+    There is no sharing of data with third parties, because there is no transmission of data at all.
+    Your data is <strong>never sold</strong>, rented, licensed or used for advertising, profiling,
+    credit scoring or any secondary purpose.
+  </p>
+
+  <h2>7. Retention and deletion</h2>
+  <p>You are in full and immediate control, inside the app itself:</p>
+  <ul>
+    <li><strong>Delete a rule:</strong> remove it in the “Rules” tab.</li>
+    <li><strong>Clear the history:</strong> use the option to clear the blocked-call history.</li>
+    <li><strong>Delete everything at once:</strong> use <em>Settings &rsaquo; Apps &rsaquo; CallMask
+    &rsaquo; Storage &rsaquo; Clear data</em>, or simply <strong>uninstall the app</strong> — Android
+    removes the database and preferences along with it.</li>
+    <li><strong>Revoke access:</strong> you can withdraw the call log permission and the screening role
+    at any time in Android settings. Without the screening role, the app no longer receives calls to
+    evaluate.</li>
+  </ul>
+  <p>
+    Since no data ever leaves the device, there is no copy held by the developer that could be
+    requested, corrected or deleted.
+  </p>
+
+  <h2>8. Children</h2>
+  <p>
+    CallMask is not directed at children and does not knowingly collect data from minors. Since the app
+    does not collect or transmit anyone's data, no child's information is under the developer's control.
+    There is no login, account, profile or user-generated content.
+  </p>
+
+  <h2>9. Legal basis and your rights</h2>
+  <p>
+    All processing described here happens exclusively on your device, under your control, based on
+    permissions you expressly grant in Android. To the extent that Brazil's General Data Protection Law
+    (<strong>LGPD, Law No. 13,709/2018</strong>) applies — and, by analogy, comparable regimes such as
+    the GDPR:
+  </p>
+  <ul>
+    <li>processing relies on the data subject's <strong>consent</strong> (LGPD art. 7, I), expressed by
+    granting the call log permission and the screening role, and is limited to the specific purpose of
+    deciding whether an incoming call should be blocked;</li>
+    <li><strong>data minimisation</strong> is observed: only the incoming number and the call log are
+    used, and only on the device;</li>
+    <li>the rights of access, correction, deletion, portability and withdrawal of consent (LGPD art. 18)
+    are exercised <strong>directly in the app and in Android settings</strong>, as described in section 7
+    — the data is physically with you, not with the developer;</li>
+    <li>there is no international data transfer, because there is no transfer at all.</li>
+  </ul>
+  <p>
+    Data protection questions can be sent to
+    <a href="mailto:juzoluis@gmail.com">juzoluis@gmail.com</a>.
+  </p>
+
+  <h2>10. In-app purchases</h2>
+  <p>
+    <strong>Today CallMask has no in-app purchases, subscriptions or paid tier.</strong> If a one-time
+    purchase (premium version) is offered in the future, it will be processed
+    <strong>entirely by Google Play Billing</strong>: payment data is collected and processed by Google
+    under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, and the developer
+    <strong>never receives or stores</strong> card numbers, bank details or billing addresses. The app
+    would only check locally, against the Google Play service installed on the device, whether the
+    purchase was made. This policy will be updated before any such change takes effect.
+  </p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>
+    If this policy changes, the “last updated” date at the top will change and the new version will take
+    effect on this same page. Material changes — especially anything involving new permissions or any
+    form of data transmission — will be clearly described in the app's release notes on Google Play.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    Juzo Luis Hatao Marinelli<br>
+    Email: <a href="mailto:juzoluis@gmail.com">juzoluis@gmail.com</a>
+  </p>
+</main>
+<footer>
+  <p>CallMask &middot; Privacy Policy &middot; July 22, 2026 &middot;
+  <a href="index.html">Versão em português</a></p>
+</footer>
+</body>
+</html>
