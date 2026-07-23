@@ -145,10 +145,18 @@
   </table>
   </div>
   <p>
-    <code>READ_CALL_LOG</code> é a <strong>única</strong> permissão declarada pelo aplicativo, além do
-    papel de triagem de chamadas concedido explicitamente por você nas configurações do Android.
-    O app <strong>não</strong> pede acesso a contatos, mensagens, microfone, câmera, localização,
-    arquivos, identificadores de publicidade ou qualquer outra fonte de dados.
+    <code>READ_CALL_LOG</code> é a <strong>única</strong> permissão de acesso a dados declarada pelo
+    aplicativo, além do papel de triagem de chamadas concedido explicitamente por você nas
+    configurações do Android. O app <strong>não</strong> pede acesso a contatos, mensagens, microfone,
+    câmera, localização, arquivos, identificadores de publicidade ou qualquer outra fonte de dados.
+  </p>
+  <p>
+    Se você inspecionar o manifesto do APK, verá uma segunda entrada,
+    <code>com.juzoluis.callmask.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. Ela é acrescentada
+    automaticamente pelas bibliotecas AndroidX do Google, é definida pelo próprio app, é do nível
+    <em>signature</em> (só o app assinado com a mesma chave pode usá-la) e serve apenas para o app
+    conversar consigo mesmo internamente. Ela <strong>não</strong> dá acesso a nenhum dado seu nem a
+    nenhum recurso do aparelho.
   </p>
 
   <h2>4. Onde esses dados ficam</h2>

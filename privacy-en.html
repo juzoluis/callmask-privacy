@@ -144,10 +144,18 @@
   </table>
   </div>
   <p>
-    <code>READ_CALL_LOG</code> is the <strong>only</strong> permission declared by the application,
-    besides the call screening role you explicitly grant in Android settings. The app does
+    <code>READ_CALL_LOG</code> is the <strong>only</strong> data-access permission declared by the
+    application, besides the call screening role you explicitly grant in Android settings. The app does
     <strong>not</strong> request access to contacts, messages, microphone, camera, location, files,
     advertising identifiers or any other data source.
+  </p>
+  <p>
+    If you inspect the APK's manifest you will find a second entry,
+    <code>com.juzoluis.callmask.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is added
+    automatically by Google's AndroidX libraries, is defined by the app itself, is
+    <em>signature</em>-level (only an app signed with the same key can hold it) and exists solely so
+    the app can talk to itself internally. It grants <strong>no</strong> access to your data or to any
+    device capability.
   </p>
 
   <h2>4. Where the data is stored</h2>
